@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Discovery</title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" media="screen">
+	<link rel="stylesheet" type="text/css" href="css/leaflet.css">
+	<link rel="stylesheet" type="text/css" href="css/leaflet.draw.css">
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+<body>
+
+	<div class="navbar navbar-fixed-top">
+		<div class="navbar-inner">
+			<a class="brand" href="#">Discovery</a>
+			<form id="connection-form" class="navbar-form pull-left">
+				<div id="control-group" class="control-group">
+					<div class="controls">
+						<input type="text" id="url" placeholder="Server ip / host">
+						<select id="index" class="input-small"></select>
+						<button type="button" id="connect" class="btn">Connect</button>
+						<button type="button" id="disconnect" class="btn">Disconnect</button>
+					</div>
+				</div>
+			</form>
+			<form id="search-form" class="navbar-form pull-right">
+				<div class="btn-group">
+					<button type="button" id="search" class="btn disabled"><i class="icon-search"></i> Search</button>
+					<button type="button" class="btn dropdown-toggle disabled" data-toggle="dropdown">
+						<span class="caret"></span>
+					</button>
+					<div class="dropdown-menu pull-right query-options">
+						<fieldset>
+							<legend>Query options</legend>
+							<h5>Search on indices…</h5>
+							<label class="checkbox inline"><input type="checkbox" name="types" value="node" checked> Node</label> 
+							<label class="checkbox inline"><input type="checkbox" name="types" value="way" checked> Way</label>
+							<h5>Filter by tags…</h5>
+							<div id="filters"></div>
+							<button type="button" id="add-filter" class="btn"><i class="icon-plus"></i></button>
+						</fieldset>
+					</div>
+				</div>
+			</form>
+			<span id="took" class="navbar-text pull-right"></span>
+		</div>
+	</div>
+
+	<div id="map"> 
+		<div id="map-canvas" class="map-canvas"></div>
+	</div>
+
+	<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
+	<script type="text/javascript" src="js/lib/jquery-ui-1.10.3.min.js"></script>
+	<script type="text/javascript" src="js/lib/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/lib/leaflet.js"></script>
+	<script type="text/javascript" src="js/lib/leaflet.draw.js"></script>
+	<script type="text/javascript" src="js/lib/elastic.min.js"></script>
+	<script type="text/javascript" src="js/lib/elastic-jquery-client.min.js"></script>
+	<script type="text/javascript" src="js/scripts.js"></script>
+	<script type="text/javascript" src="js/map.js"></script>
+	<script type="text/javascript" src="js/es.js"></script>
+	<script type="text/javascript" src="js/ui.js"></script>
+	<script type="text/javascript" src="js/alert.js"></script>
+
+</body>
+</html>
