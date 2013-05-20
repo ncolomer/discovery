@@ -160,7 +160,7 @@ var mapController = {
 			},
 			pointToLayer: function(featureData, latlng) {
 				return new L.CircleMarker(latlng, {
-					radius: 2, weight: 2, color: "#f00", opacity: 0.8, fillOpacity: 0.8 
+					radius: 4, weight: 2, color: "#f00", opacity: 0.8, fillOpacity: 0.8 
 				});
 			},
 			onEachFeature: function(feature, layer) {
