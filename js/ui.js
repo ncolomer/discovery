@@ -90,6 +90,7 @@ var uiController = {
 			border: "1px solid red",
 			padding: "2px 5px 2px 5px",
 			"background-color": "red",
+			"max-width": "300px",
 			color: "white",
 			opacity: 0.75
 		}).appendTo("body").fadeIn(200);
