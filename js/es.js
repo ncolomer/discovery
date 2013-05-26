@@ -47,7 +47,9 @@ var esController = {
 		request.doSearch(function(result) {
 			console.log(result);
 			var hits = result.hits.hits;
-			$("span#took").html("took <strong>" + result.took + "</strong> ms").show().delay(500).fadeOut(250);
+			var message = "<strong>" + result.hits.hits.length + "</strong> hits " + 
+					" in <strong>" + result.took + "</strong> ms";
+			$("span#took").html(message).show().delay(500).fadeOut(500);
 			mapController.drawResult(hits);
 		});
 
