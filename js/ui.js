@@ -30,12 +30,14 @@ var uiController = {
 			$("div#filters").append(html);
 		});
 		$("button#search").click(function() {
-			var index = uiController.getIndex();
-			var types = uiController.getTypes();
-			var size = uiController.getSize();
-			var tags = uiController.getTags();
-			var shape = mapController.getFeatureShape();
-			esController.search(index, types, size, tags, shape);
+			esController.search({
+				index: uiController.getIndex(),
+				types: uiController.getTypes(),
+				size: uiController.getSize(),
+				name: uiController.getName(),
+				tags: uiController.getTags(),
+				shape: mapController.getFeatureShape()
+			});
 		});
 	},
 	"setConnected": function(connected, warning) {
@@ -76,6 +78,10 @@ var uiController = {
 			$("#max-result").val("");
 			return 10;
 		}
+	},
+	"getName": function() {
+		var name = $("input#name").val();
+		return (name !== '') ? name : null;
 	},
 	"getTags": function() {
 		var tags = {};

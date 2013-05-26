@@ -21,26 +21,31 @@ var esController = {
 			mapController.setEnabled(false);
 		});
 	},
-	"search": function(index, types, size, tags, shape) {
+	"search": function(params) {
 		var filters = [];
 		// Add shape filter
+		var shape = params.shape;
 		var geoShapeFilter = ejs.GeoShapeFilter()
 			.field("shape")
 			.shape(ejs.Shape(shape.type, shape.coordinates));
 		filters.push(geoShapeFilter);
 		// Add tag filters if any
+		var tags = params.tags;
 		for (key in tags) {
 			if (tags[key]) filters.push(ejs.TermFilter("tags." + key, tags[key]));
 			else filters.push(ejs.ExistsFilter("tags." + key));
 		}
 		// Build query
-		var andFilter = ejs.AndFilter(filters);		
-		var filteredQuery = ejs.FilteredQuery(ejs.MatchAllQuery(), andFilter);
+		var query = (params.name) ? 
+			ejs.MultiMatchQuery(["tags.name","tags.name.analyzed"], params.name):
+			ejs.MatchAllQuery();
 		// Build request
+		var andFilter = ejs.AndFilter(filters)
+		var filteredQuery = ejs.FilteredQuery(query, andFilter);
 		var request = ejs.Request()
-			.indices(index)
-			.types(types)
-			.size(size)
+			.indices(params.index)
+			.types(params.types)
+			.size(params.size)
 			.query(filteredQuery);
 		console.log(request.toString());
 		// Execute request
