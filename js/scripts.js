@@ -9,7 +9,7 @@ $(document).ready(function() {
 	});
 	$(document).keypress(function(e){
 	    if (e.which == 13 && esController.isConnected) {
-	        $("#save_post").click();
+	        $("#search").click();
 	    }
 	});
 });
@@ -20,10 +20,6 @@ function getServerUrl() {
     } else return null;
 }
 
-function getSearchUrlVar(key) {
-    var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
-    return decodeURIComponent(result && result[1] || "");
-};
 function normalizeUrl(url) {
 	var regexp = new RegExp("^(http://)?([a-zA-Z0-9\-\.]+)(:([0-9]+))?(.*)$");
 	var m = regexp.exec(url);
@@ -35,8 +31,12 @@ function normalizeUrl(url) {
 }
 
 function getUrlHash() {
-    return window.location.hash.replace("#", "");
-};
+    return window.location.hash.slice(1);
+}
+
+function setUrlHash(hash) {
+	window.location.hash = '#' + hash;
+}
 
 function mapToGeoJsonType(type) {
 	var mapper = {
