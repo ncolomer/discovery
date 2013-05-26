@@ -46,6 +46,7 @@
 						</fieldset>
 					</div>
 				</div>
+				<button type="button" class="btn" data-toggle="modal" data-target="#about"><i class="icon-question-sign"></i></button>
 			</form>
 			<span id="took" class="navbar-text pull-right"></span>
 		</div>
@@ -53,6 +54,31 @@
 
 	<div id="map"> 
 		<div id="map-canvas" class="map-canvas"></div>
+	</div>
+	
+	<div id="about" class="modal hide fade">
+		<div class="modal-header">
+			<h3>About</h3>
+		</div>
+		<div class="modal-body">
+			<p><a href="https://github.com/ncolomer/discovery" target="_blank">Discovery</a> is an <a href="http://www.elasticsearch.org/"  target="_blank">elasticsearch</a> site plugin to visualize <a href="http://www.openstreetmap.org/"  target="_blank">OpenStreetMap</a><br/> data, indexed using the <a href="https://github.com/ncolomer/elasticsearch-osmosis-plugin" target="_blank">elasticsearch-osmosis-plugin</a>.</p>
+			<p>It uses these (really!) great plugins: 
+				<ul>
+					<li><a href="http://jquery.com/" target="_blank">jQuery</a> and <a href="http://twitter.github.io/bootstrap/" target="_blank">Bootstrap</a> for the UI</li>
+					<li><a href="http://leafletjs.com/" target="_blank">Leaflet</a> to render <a href="http://www.mapquest.com/" target="_blank">MapQuest</a> open tiles</li>
+					<li>And <a href="http://www.fullscale.co/elasticjs/" target="_blank">elastic.js</a> to query elasticsearch node</li>
+				</ul>
+			</p>
+			<p>This plugin is licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0" target="_blank"> Apache License, Version 2.0</a>.</p>
+		</div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		</div>
+		<div style="position: absolute; top: 0; right: 0; border: 0;">
+			<a href="https://github.com/ncolomer/discovery" target="_blank">
+				<img  src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub">
+			</a>
+		</div>
 	</div>
 
 	<script type="text/javascript" src="js/lib/jquery-1.9.1.min.js"></script>
