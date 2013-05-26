@@ -12,8 +12,10 @@ $(document).ready(function() {
 var uiController = {
 	"init": function() {
 		$("button#connect").click(function() {
-			var host = $("input#url").val();
-			esController.connect(host)
+			var url = $("input#url").val();
+			url = normalizeUrl(url);
+			$("input#url").val(url);
+			esController.connect(url);
 		});
 		$("button#disconnect").click(function() {
 			mapController.setEnabled(false);

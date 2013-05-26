@@ -24,6 +24,15 @@ function getSearchUrlVar(key) {
     var result = new RegExp(key + "=([^&]*)", "i").exec(window.location.search);
     return decodeURIComponent(result && result[1] || "");
 };
+function normalizeUrl(url) {
+	var regexp = new RegExp("^(http://)?([a-zA-Z0-9\-\.]+)(:([0-9]+))?(.*)$");
+	var m = regexp.exec(url);
+	if (m) {
+		var host = m[2];
+		var port = (m[4]) ? m[4] : 9200;
+		return host + ":" + port;
+	} else return url;
+}
 
 function getUrlHash() {
     return window.location.hash.replace("#", "");
