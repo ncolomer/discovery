@@ -1,6 +1,6 @@
 # discovery
 
-Discovery is an [elasticsearch](http://www.elasticsearch.org) site plugin to visualize [OpenStreetMap](http://www.openstreetmap.org) 
+Discovery is an [elasticsearch](http://www.elasticsearch.org) site plugin to visualize and explore [OpenStreetMap](http://www.openstreetmap.org) 
 data, indexed using [elasticsearch-osmosis-plugin](https://github.com/ncolomer/elasticsearch-osmosis-plugin).
 
 ## Features
