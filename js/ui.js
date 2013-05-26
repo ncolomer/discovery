@@ -32,9 +32,10 @@ var uiController = {
 		$("button#search").click(function() {
 			var index = uiController.getIndex();
 			var types = uiController.getTypes();
+			var size = uiController.getSize();
 			var tags = uiController.getTags();
 			var shape = mapController.getFeatureShape();
-			esController.search(index, types, tags, shape);
+			esController.search(index, types, size, tags, shape);
 		});
 	},
 	"setConnected": function(connected, warning) {
@@ -66,6 +67,15 @@ var uiController = {
 			types.push($(this).val());
 		});
 		return types;
+	},
+	"getSize": function() {
+		var size = $("input#max-results").val();
+		if (parseInt(size)) {
+			return size;
+		} else {
+			$("#max-result").val("");
+			return 10;
+		}
 	},
 	"getTags": function() {
 		var tags = {};

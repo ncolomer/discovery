@@ -21,7 +21,7 @@ var esController = {
 			mapController.setEnabled(false);
 		});
 	},
-	"search": function(index, types, tags, shape) {
+	"search": function(index, types, size, tags, shape) {
 		var filters = [];
 		// Add shape filter
 		var geoShapeFilter = ejs.GeoShapeFilter()
@@ -40,6 +40,7 @@ var esController = {
 		var request = ejs.Request()
 			.indices(index)
 			.types(types)
+			.size(size)
 			.query(filteredQuery);
 		console.log(request.toString());
 		// Execute request
