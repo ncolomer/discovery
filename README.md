@@ -8,17 +8,17 @@ data, indexed using [elasticsearch-osmosis-plugin](https://github.com/ncolomer/e
 * Search for indexed OSM features (node, way or both)
 * Filter on features name and/or tags
 * Set max number of features to draw on the map
-* Draw Rectangle or Polygon as Shape Filter (default to map's bounds)
+* Draw Rectangle or Polygon as Shape filter (default to map's bounds)
 
-## Usage
+## Installation
 
-### The quick way - use the online version
+### The quick way, using the online version
 
 Open your favorite browser and connect to [ncolomer.github.io/discovery](http://ncolomer.github.io/discovery)
 
-### The manual way - install the plugin
+### The manual way, as an elasticsearch plugin
 
-Install the plugin on an elasticsearch node: 
+Install on an elasticsearch node as a site plugin: 
 
 ```bash
 # cd to the elasticsearch installation directory
