@@ -12,13 +12,13 @@ data, indexed using [elasticsearch-osmosis-plugin](https://github.com/ncolomer/e
 
 ## Installation
 
-### The quick way, using the online version
+### The quick way (using the online version)
 
-Open your favorite browser and connect to [ncolomer.github.io/discovery](http://ncolomer.github.io/discovery)
+Nothing needed, just open your favorite browser and connect to [ncolomer.github.io/discovery](http://ncolomer.github.io/discovery)
 
-### The manual way, as an elasticsearch plugin
+### The manual way (as an elasticsearch plugin)
 
-Install on an elasticsearch node as a site plugin: 
+Install the plugin on any up&running elasticsearch node: 
 
 ```bash
 # cd to the elasticsearch installation directory
