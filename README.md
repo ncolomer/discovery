@@ -1,14 +1,14 @@
 # discovery
 
-Discovery is an [elasticsearch](http://www.elasticsearch.org) site plugin to visualize and explore [OpenStreetMap](http://www.openstreetmap.org) 
+Discovery is an [elasticsearch](http://www.elasticsearch.org) plugin to visualize and explore [OpenStreetMap](http://www.openstreetmap.org) 
 data, indexed using [elasticsearch-osmosis-plugin](https://github.com/ncolomer/elasticsearch-osmosis-plugin).
 
 ## Features
 
-* Search for indexed OSM features (node, way or both)
+* Search for indexed OpenStreetMap features (node, way or both)
 * Filter on features name and/or tags
-* Set max number of features to draw on the map
-* Draw Rectangle or Polygon as Shape filter (default to map's bounds)
+* Set max number of features drawn on the map
+* Draw Rectangle or Polygon as Shape filter (defaults to map's bounds)
 
 ## Installation
 
@@ -32,9 +32,9 @@ Open your favorite browser and connect to `http://{node_ip}:{node_http_port}/_pl
 
 ## Screenshots
 
-<img src="https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery1.png" alt="Discovery screenshot #1" width="200" style="float:left;"/>
-<img src="https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery2.png" alt="Discovery screenshot #2" width="200" style="float:left;"/>
-<img src="https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery3.png" alt="Discovery screenshot #3" width="200" style="float:left;"/>
+[<img src="https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery1.png" alt="Discovery screenshot #1" width="200" />](https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery1.png)
+[<img src="https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery2.png" alt="Discovery screenshot #2" width="200" />](https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery2.png)
+[<img src="https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery3.png" alt="Discovery screenshot #3" width="200" />](https://raw.github.com/ncolomer/elasticsearch-osmosis-plugin/master/assets/discovery3.png)
 
 ## License
 
